@@ -1,0 +1,19 @@
+{
+  "name": "plataforma-de-informes",
+  "version": "1.0.0",
+  "description": "A platform that generates structural engineering reports",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fjbaculima/Plataforma-de-Informes.git"
+  },
+  "author": "Francisco Baculima and Axel Yaguana <axl9809@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fjbaculima/Plataforma-de-Informes/issues"
+  },
+  "homepage": "https://github.com/fjbaculima/Plataforma-de-Informes#readme"
+}
