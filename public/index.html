@@ -4,129 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <script src="../jspdf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
-    <title>Informe Estructural</title>
-    <script src="../src/app.js"></script>
+    <title>Genera tu informe estructural</title>
 </head>
 <body>
-    <div class="container nt-4">
-        <div class="row-au">
-            <div class="row-cols-md-auto offset-md-auto">
-                <h3 class="text-center">Informe Estructural de Acero - Contexto Ecuatoriano</h3>
-                <hr>
-                <form id="form" enctype="multipart/form-data">
-                    <div class="mb-3">
-                        <label for="curso" class="form-label">Profesion: </label>
-                        <select class="form-select" id="curso">
-                            <option value="">Seleccione la profesion</option>
-                            <option value="Ingeniero Civil">Ingeniero Civil</option>
-                            <option value="Arquitecto">Arquitecto</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="proyecto" class="form-label">Ubicacion del Proyecto</label>
-                        <input type="text" class="form-control" id="proyecto">
-                    </div>
+   <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Concreto</li>
+                <li>Acero</li>
+                <li>About</li>
+            </ul>
+        </nav>
+   </header>
 
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="nombre" class="form-label">Nombres</label>
-                            <input type="text" class="form-control" id="nombre">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="apellido" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="apellido">
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="text" class="form-control" id="email">
-                    </div>
+   <main>
+       <div>
+           <h1>Crea tu informe estructural de concreto</h1>
+       </div>
+        <form>
+            <div>
+                <div>
+                    <h2>Ingresa tus datos personales</h2>
+                </div>
 
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="direccion" class="form-label">Direccion</label>
-                            <input type="text" class="form-control" id="direccion">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="telefono" class="form-label">Telefono</label>
-                            <input type="text" class="form-control" id="telefono">
-                        </div>
-                    </div>
+                <div>
+                    <label for="name">Tu nombre</label>
+                    <input type="text" name="name" id="name" placeholder="Tu nombre...">
 
-                    <div class="row mb-3">
-
-                        <div class="col-md-6">
-                            <label for="modulo" class="form-label">Modulo de Elasticidad (Es)</label>
-                            <input type="text" class="form-control" id="modulo">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label for="unidades" class="form-label">Unidades</label>
-                            <input type="text" class="form-control" id="unidades">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label for="fluencia" class="form-label">Fluencia del Acero (fy)</label>
-                            <input type="text" class="form-control" id="fluencia">
-                        </div>
-    
-                        <div class="col-md-6">
-                            <label for="ruptura" class="form-label">Ruptura del Acero (fu)</label>
-                            <input type="text" class="form-control" id="ruptura">
-                        </div>
-
-                        
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="soldadura" class="form-label">Procedimiento de Soldadura</label>
-                        <input type="text" class="form-control" id="soldadura">
-                    </div>
-
-
-                    <div class="mb-3">
-                        <div class="col-md-4">
-                            <div>
-                                <label for="" class="form-label  d-md-flex">Normativas Vigentes en el Ecuador</label>
-                                <div class="form-check form-check-inline">
-                                    <input type="radio" class="form-check-input" id="norma-0" value="0">
-                                    <label for="norma-0" class="form-check-label">Norma Ecuatoriana de la Construcción, NEC SE, 2015</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input type="radio"  class="form-check-input" id="norma-1" value="1">
-                                    <label for="norma-1" class="form-check-label">Building Code Requirements for Structural Concrete (ACI 318-14) and Commentary</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input type="radio"  class="form-check-input" id="norma-2" value="2">
-                                    <label for="norma-2" class="form-check-label">Minimum Design Loads for buildings and other structures ASCE 7-10</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input type="radio"  class="form-check-input" id="norma-3" value="3">
-                                    <label for="3" class="form-check-label">ASTM A706</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="margin-top: 5px">
-                        <label for="avatar"> <strong>Avatar</strong></label>
-                        <input type="file" name="avatar" id="avatar">
-                    </div>
-
-
-
-                    <span class="d-block pb-2"> Firma Digital aqui</span>
-                    <div class="signature mb-2" style="width: 100%; height: 200px;">
-                        <canvas id="signature-canvas" style="border: 1px dashed red; width: 100%; height: 200px;"></canvas>
-                    </div>
-                    <button type="submit" class="btn btn-primary mb-4">Generar PDF</button>
-                </form>
+                    <label for="profession">Tu profesión</label>
+                    <select name="profession" id="profession">
+                        <option value="ingenieroCivil">Ingeniera/o Civil</option>
+                        <option value="ingenieroMecanico">Ingeniera/o Mecánica/o</option>
+                        <option value="arquitecto">Arquitecta/o</option>
+                    </select>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <div>
+                <div>
+                    <h2>Ingresa los datos del proyecto</h2>
+                </div>
+                <div>
+                    <label for="projectName">Proyecto</label>
+                    <input type="text" name="projectName" id="projectName" placeholder="Nombre del proyecto">
+                    <label for="client">Cliente</label>
+                    <input type="text" name="client" id="client" placeholder="Nombre de tu cliente...">
+                    <label for="address">Dirección</label>
+                    <input type="text" name="address" id="address" placeholder="Calle, cantón, provincia...">
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <h2>Selecciona las normas de diseño</h2>
+                </div>
+                <div>
+                    <input type="checkbox" name="NEC15" id="NEC15">
+                    <label for="NEC15">Norma Ecuatoriana de la construcción (NEC 2015)</label>
+                    <input type="checkbox" name="ACI" id="ACI">
+                    <label for="ACI">Building Code Requirements for Structural Concrete (ACI 318-19)</label>
+                    <input type="checkbox" name="ASCE" id="ASCE">
+                    <label for="ASCE">Minimum Design Loads for Buildings and Other Structures (ASCE 7-10)</label>
+                    <input type="checkbox" name="ASTM" id="ASTM">
+                    <label for="ASTM">ASTM A706)</label>
+                </div>
+            </div>
+        </form>
+   </main> 
+
+   <footer>
+
+   </footer>
 </body>
 </html>
