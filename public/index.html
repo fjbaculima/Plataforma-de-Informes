@@ -70,6 +70,55 @@
                     <label for="ASTM">ASTM A706)</label>
                 </div>
             </div>
+
+            <div>
+                <div>
+                    <h2>Ingresa las caracterísitcas de los materiales</h2>
+                </div>
+                <div>
+                    <div>
+                        <h3>Concreto</h3>
+                        <label for="concrete">Resistencia a la compresión a los 28 días (f'c), kg/cm²</label>
+                        <input type="text" name="concrete" id="concrete" placeholder="Resistencia en kg/cm²">
+                    </div>
+                    <div>
+                        <h3>Acero</h3>
+                        <label for="steel-flow">Resistencia a la fluencia del acero (fy), kg/cm²</label>
+                        <input type="text" name="steel-flow" id="steel-flow" placeholder="Resistencia en kg/cm²">
+                        <label for="modulus-of-elasticity">Módulo de elasticidad (E), kg/cm²</label>
+                        <input type="text" name="modulus-of-elasticity" id="modulus-of-elasticity" placeholder="Módulo de elasticidad en kg/cm²">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <h2>Cargas</h2>
+                </div>
+
+                <div>
+                    <div>
+                        <h3>Cargas gravitacionales</h3>
+                        <label for="structure-weight">Peso propio de la estructura de hormigón</label>
+                        <input type="text" name="structure-weight" id="structure-weight" placeholder="Peso propio de la estructura">
+                        <label for="structure-weight">Peso propiol acero de refuerzo</label>
+                        <input type="text" name="steel-weight" id="steel-weight" placeholder="Peso propio del acero de refuerzo">
+                        <label for="deadLoad">Carga muerta adicional</label>
+                        <select name="deadLoad" id="deadLoad">
+                            <option value="basalto">Basalto</option>
+                        </select>
+                        <button>Agregar otra carga</button>
+                    </div>
+                    <div>
+                        <h3>Cargas sísmicas</h3>
+                        <label for="steel-flow">Resistencia a la fluencia del acero (fy), kg/cm²</label>
+                        <input type="text" name="steel-flow" id="steel-flow" placeholder="Resistencia en kg/cm²">
+                        <label for="modulus-of-elasticity">Módulo de elasticidad (E), kg/cm²</label>
+                        <input type="text" name="modulus-of-elasticity" id="modulus-of-elasticity" placeholder="Módulo de elasticidad en kg/cm²">
+                    </div>
+                </div>
+
+            </div>
         </form>
    </main> 
 
