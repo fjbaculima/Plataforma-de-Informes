@@ -50,7 +50,7 @@ async function generatePDF(curso, nombres, apellidos, email, direccion, telefono
 
     const signatureImage = signaturePad.toDataURL();
     
-    const image = await loadImage("formulario.jpg");
+    const image = await loadImage("formulario.png");
     const pdf = new jsPDF('p', 'pt', 'legal');
     pdf.addImage(image, 'PNG', 0 ,0, 615, 970);
     pdf.addImage(signatureImage, 'PNG', 200,765,400,50);
