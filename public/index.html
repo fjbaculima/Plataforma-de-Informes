@@ -108,16 +108,69 @@
                             <option value="basalto">Basalto</option>
                         </select>
                         <button>Agregar otra carga</button>
+                        <label for="liveLoad">Cargas vivas, Toneladas</label>
+                        <input type="text" name="liveLoad" id="liveLoad" placeholder="Cargas vivas totales">
                     </div>
                     <div>
                         <h3>Cargas sísmicas</h3>
-                        <label for="steel-flow">Resistencia a la fluencia del acero (fy), kg/cm²</label>
-                        <input type="text" name="steel-flow" id="steel-flow" placeholder="Resistencia en kg/cm²">
-                        <label for="modulus-of-elasticity">Módulo de elasticidad (E), kg/cm²</label>
-                        <input type="text" name="modulus-of-elasticity" id="modulus-of-elasticity" placeholder="Módulo de elasticidad en kg/cm²">
+                        <label for="parroquia">Parroquia</label>
+                        <input type="text" name="parroquia" id="parroquia" placeholder="parroquia">
+                        <label for="canton">Cantón</label>
+                        <input type="text" name="canton" id="canton" placeholder="Cantón...">
+                        <label for="province">Provincia</label>
+                        <input type="text" name="province" id="province" placeholder="province">
+
+                        <label for="soilType">Tipo de suelo</label>
+                        <select name="soilType" id="soilType">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                        </select>
+
+                        <label for="importanceCoeff">Coeficiente de importancia</label>
+                        <input type="text" name="importanceCoeff" id="importanceCoeff" placeholder="Coeficiente de importancia según tipo de estructura">
+                        <label for="basal">Cortante basal</label>
+                        <input type="text" name="basal" id="basal" placeholder="Cortante basal">
                     </div>
                 </div>
 
+            </div>
+
+            <div>
+                <div>
+                    <h2>Combinaciones de cargas de diseño</h2>
+                </div>
+                <div>
+                    <input type="checkbox" name="EQ1" id="EQ1">
+                    <label for="EQ1">1.4D</label>
+                    <input type="checkbox" name="EQ2" id="EQ2">
+                    <label for="EQ2">1.2D + 1.6L + 0.5max(Lr, S, R)</label>
+                    <input type="checkbox" name="EQ3" id="EQ3">
+                    <label for="EQ3">1.2D + 1.6max(Lr, S, R) + max(Lr, 0.5W)</label>
+                    <input type="checkbox" name="EQ4" id="EQ4">
+                    <label for="EQ4">1.2D + W + L + 0.5max(Lr, S, 0.5W)</label>
+                    <input type="checkbox" name="EQ5" id="EQ5">
+                    <label for="EQ5">1.2D + E + L + 0.2S</label>
+                    <input type="checkbox" name="EQ6" id="EQ6">
+                    <label for="EQ6">0.9D + W</label>
+                    <input type="checkbox" name="EQ7" id="EQ7">
+                    <label for="EQ7">0.9D + E</label>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <h2>Derivas admisibles</h2>
+                </div>
+                <div>
+                    <label for="displacement">Estructura de: </label>
+                        <select name="displacement" id="displacement">
+                            <option value="concrete">Hormigón armado, metálica y madera, con desplazamiento máximo de 0.02</option>
+                            <option value="masonry">Mampostería, con desplazamiento máximo de 0.01</option>
+                        </select>
+                </div>
             </div>
         </form>
    </main> 
