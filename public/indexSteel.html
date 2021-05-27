@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Informe Estructural</title>
+    <link rel="stylesheet" href="/style.css">
+    <title class="title">Informe Estructural</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li>Home</li>
-                <li>Concreto</li>
-                <li>Acero</li>
-                <li>About</li>
+            <ul class="main-nav">
+                <li class="main-nav__item"><a href="">Home</a></li>
+                <li class="main-nav__item"><a href="">Concreto</a></li>
+                <li class="main-nav__item"><a href="">Acero</a></li>
+                <li class="main-nav__item"><a href="">About</a></li>
             </ul>
         </nav>
    </header>
 
-
-   <main>
+   <main class="container">
        <div>
            <h1>Informe Estructural de Acero - Contexto Ecuatoriano</h1>
        </div>
@@ -31,10 +31,9 @@
 
                <div>
                    <label for="name">Tu nombre</label>
-                   <input type="text" name="name" id="name" placeholder="Tu nombre...">
-
+                   <input class="controls" type="text" name="name" id="name" placeholder="Tu nombre...">
                    <label for="profession">Tu profesion</label>
-                    <select name="profession" id="profession">
+                    <select class="controls" name="profession" id="profession">
                         <option value="ingenieroCivil">Ingeniera/o Civil</option>
                         <option value="ingenieroMecanico">Ingeniera/o Mecánica/o</option>
                         <option value="arquitecto">Arquitecta/o</option>
@@ -48,11 +47,11 @@
                </div>
                <div>
                     <label for="projectName">Proyecto</label>
-                    <input type="text" name="projectName" id="projectName" placeholder="Nombre del proyecto">
+                    <input class="controls" type="text" name="projectName" id="projectName" placeholder="Nombre del proyecto">
                     <label for="client">Cliente</label>
-                    <input type="text" name="client" id="client" placeholder="Nombre de tu cliente...">
+                    <input class="controls" type="text" name="client" id="client" placeholder="Nombre de tu cliente...">
                     <label for="address">Dirección</label>
-                    <input type="text" name="address" id="address" placeholder="Calle, cantón, provincia...">
+                    <input class="controls" type="text" name="address" id="address" placeholder="Calle, cantón, provincia...">
                </div>
            </div>
 
@@ -61,13 +60,13 @@
                 <h2>Selecciona las normas de diseño</h2>
             </div>
             <div>
-                <input type="checkbox" name="NEC15" id="NEC15">
+                <input class="controls" type="checkbox" name="NEC15" id="NEC15">
                 <label for="NEC15">Norma Ecuatoriana de la construcción (NEC 2015)</label>
-                <input type="checkbox" name="ACI" id="ACI">
+                <input class="controls" type="checkbox" name="ACI" id="ACI">
                 <label for="ACI">Building Code Requirements for Structural Concrete (ACI 318-19)</label>
-                <input type="checkbox" name="ASCE" id="ASCE">
+                <input class="controls" type="checkbox" name="ASCE" id="ASCE">
                 <label for="ASCE">Minimum Design Loads for Buildings and Other Structures (ASCE 7-10)</label>
-                <input type="checkbox" name="ASTM" id="ASTM">
+                <input class="controls" type="checkbox" name="ASTM" id="ASTM">
                 <label for="ASTM">ASTM A706)</label>
             </div>
         </div>
@@ -80,13 +79,13 @@
                 <div>
                     <h3>Acero</h3>
                     <label for="steel-flow">Resistencia a la fluencia del acero (fy), kg/cm²</label>
-                    <input type="text" name="steel-flow" id="steel-flow" placeholder="Resistencia en kg/cm²">
+                    <input class="controls" type="text" name="steel-flow" id="steel-flow" placeholder="Resistencia en kg/cm²">
                     <label for="steel-flow">Resistencia a la fractura del acero (fu), kg/cm²</label>
-                    <input type="text" name="steel-flow" id="steel-flow" placeholder="Resistencia en kg/cm²">
+                    <input class="controls" type="text" name="steel-flow" id="steel-flow" placeholder="Resistencia en kg/cm²">
                     <label for="steel-flow">Procedimiento de Soldadura</label>
-                    <input type="text" name="steel-flow" id="steel-flow" placeholder="Maximo 15 caracteres">
+                    <input class="controls" type="text" name="steel-flow" id="steel-flow" placeholder="Maximo 15 caracteres">
                     <label for="modulus-of-elasticity">Módulo de elasticidad (E), kg/cm²</label>
-                    <input type="text" name="modulus-of-elasticity" id="modulus-of-elasticity" placeholder="Módulo de elasticidad en kg/cm²">
+                    <input class="controls" type="text" name="modulus-of-elasticity" id="modulus-of-elasticity" placeholder="Módulo de elasticidad en kg/cm²">
                 </div>
             </div>
 
@@ -99,26 +98,26 @@
                     <div>
                         <h3>Cargas gravitacionales</h3>
                         <label for="structure-weight">Peso propio de la estructura de acero</label>
-                        <input type="text" name="structure-weight" id="structure-weight" placeholder="Peso propio de la estructura">
+                        <input class="controls" type="text" name="structure-weight" id="structure-weight" placeholder="Peso propio de la estructura">
                         <label for="deadLoad">Carga muerta adicional</label>
-                        <select name="deadLoad" id="deadLoad">
+                        <select class="controls" name="deadLoad" id="deadLoad">
                             <option value="basalto">Basalto</option>
                         </select>
                         <button>Agregar otra carga</button>
                         <label for="liveLoad">Cargas vivas, Toneladas</label>
-                        <input type="text" name="liveLoad" id="liveLoad" placeholder="Cargas vivas totales">
+                        <input class="controls" type="text" name="liveLoad" id="liveLoad" placeholder="Cargas vivas totales">
                     </div>
                     <div>
                         <h3>Cargas sísmicas</h3>
                         <label for="parroquia">Parroquia</label>
-                        <input type="text" name="parroquia" id="parroquia" placeholder="parroquia">
+                        <input class="controls" type="text" name="parroquia" id="parroquia" placeholder="parroquia">
                         <label for="canton">Cantón</label>
-                        <input type="text" name="canton" id="canton" placeholder="Cantón...">
+                        <input class="controls" type="text" name="canton" id="canton" placeholder="Cantón...">
                         <label for="province">Provincia</label>
-                        <input type="text" name="province" id="province" placeholder="province">
+                        <input class="controls" type="text" name="province" id="province" placeholder="province">
 
                         <label for="soilType">Tipo de suelo</label>
-                        <select name="soilType" id="soilType">
+                        <select class="controls" name="soilType" id="soilType">
                             <option value="A">A</option>
                             <option value="B">B</option>
                             <option value="C">C</option>
@@ -127,9 +126,9 @@
                         </select>
 
                         <label for="importanceCoeff">Coeficiente de importancia</label>
-                        <input type="text" name="importanceCoeff" id="importanceCoeff" placeholder="Coeficiente de importancia según tipo de estructura">
+                        <input class="controls" type="text" name="importanceCoeff" id="importanceCoeff" placeholder="Coeficiente de importancia según tipo de estructura">
                         <label for="basal">Cortante basal</label>
-                        <input type="text" name="basal" id="basal" placeholder="Cortante basal">
+                        <input class="controls" type="text" name="basal" id="basal" placeholder="Cortante basal">
                     </div>
                 </div>
 
@@ -140,19 +139,19 @@
                     <h2>Combinaciones de cargas de diseño</h2>
                 </div>
                 <div>
-                    <input type="checkbox" name="EQ1" id="EQ1">
+                    <input class="controls" type="checkbox" name="EQ1" id="EQ1">
                     <label for="EQ1">1.4D</label>
-                    <input type="checkbox" name="EQ2" id="EQ2">
+                    <input class="controls" type="checkbox" name="EQ2" id="EQ2">
                     <label for="EQ2">1.2D + 1.6L + 0.5max(Lr, S, R)</label>
-                    <input type="checkbox" name="EQ3" id="EQ3">
+                    <input class="controls" type="checkbox" name="EQ3" id="EQ3">
                     <label for="EQ3">1.2D + 1.6max(Lr, S, R) + max(Lr, 0.5W)</label>
-                    <input type="checkbox" name="EQ4" id="EQ4">
+                    <input class="controls" type="checkbox" name="EQ4" id="EQ4">
                     <label for="EQ4">1.2D + W + L + 0.5max(Lr, S, 0.5W)</label>
-                    <input type="checkbox" name="EQ5" id="EQ5">
+                    <input class="controls" type="checkbox" name="EQ5" id="EQ5">
                     <label for="EQ5">1.2D + E + L + 0.2S</label>
-                    <input type="checkbox" name="EQ6" id="EQ6">
+                    <input class="controls" type="checkbox" name="EQ6" id="EQ6">
                     <label for="EQ6">0.9D + W</label>
-                    <input type="checkbox" name="EQ7" id="EQ7">
+                    <input class="controls" type="checkbox" name="EQ7" id="EQ7">
                     <label for="EQ7">0.9D + E</label>
                 </div>
             </div>
@@ -163,7 +162,7 @@
                 </div>
                 <div>
                     <label for="displacement">Estructura de: </label>
-                        <select name="displacement" id="displacement">
+                        <select class="controls" name="displacement" id="displacement">
                             <option value="concrete">Hormigón armado, metálica y madera, con desplazamiento máximo de 0.02</option>
                             <option value="masonry">Mampostería, con desplazamiento máximo de 0.01</option>
                         </select>
@@ -171,15 +170,11 @@
             </div>
 
 
-
-
-
-
        </form>
    </main>
 
    <footer>
-       
+
    </footer>
 
 
