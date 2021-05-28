@@ -5,20 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genera tu informe estructural</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/styles/sytles.css">
 </head>
-<body>
-   <header>
-        <nav>
-            <ul>
+<body class="body">
+   <header class="header">
+        <nav class="header-nav">
+            <ul class="header-list-container">
                 <li>Home</li>
                 <li>Concreto</li>
                 <li>Acero</li>
                 <li>About</li>
             </ul>
         </nav>
+
+        <div class="header-hamburger">
+            <button class="ham"></button>
+        </div>
    </header>
 
-   <main>
+   <main class="main">
        <div>
            <h1>Crea tu informe estructural de concreto</h1>
        </div>
@@ -172,11 +179,39 @@
                         </select>
                 </div>
             </div>
+
+            <div>
+                <div>
+                    <h2>Modelo matemático</h2>
+                </div>
+
+                <div>
+                    <label for="software">Software</label>
+                    <input type="text" name="software" id="software" placeholder="Software que usaste">
+                    <label for="sitemaEstructural">Sistema estructural</label>
+                    <input type="text" name="sistemaEstructural" id="sistemaEstructural" placeholder="Aporticado" value="Aporticado">
+                    <label for="imgModel">Imagen de modelo matemático</label>
+                    <input type="text" name="ImgModel" id="ImgModel" placeholder="Cambia esto">
+                </div>
+            </div>
         </form>
    </main> 
 
-   <footer>
-
+   <footer class="footer">
+    <div class="footer-container">
+        <p class="footer-container-p">Desarrollado por <a href="https://twitter.com/axlyaguana11" target="_blank">Axel Yaguana</a> y <a href="https://twitter.com/Francis21312" target="_blank">Francisco Baculima</a></p>
+        <ul class="footer-list-container">
+            <li class="footer-list-item">
+                <a href="https://github.com/fjbaculima/Plataforma-de-Informes/tree/optimizations" target="_blank">GitHub</a>
+            </li>
+            <li class="footer-list-item">
+                <a href="https://www.habitatyvivienda.gob.ec/documentos-normativos-nec-norma-ecuatoriana-de-la-construccion/" target="_blank">NEC 15</a>
+            </li>
+            <li class="footer-list-item">
+                <a href="https://www.patreon.com/" target="_blank">Donaciones</a>
+            </li>
+        </ul>
+    </div>
    </footer>
 </body>
 </html>
