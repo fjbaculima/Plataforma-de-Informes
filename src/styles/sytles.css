@@ -32,10 +32,78 @@ html {
 
 .main {
     width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
+.container-h1 {
+    width: 75%;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
 
+.h1 {
+    font-size: 2.6rem;
+    text-align: center;
+}
+
+/* Form */
+
+.form {
+    position: relative;
+    margin-top: 100px;
+    width: 90%;
+    max-width: 800px;
+}
+
+.field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.container-h2 {
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.h2 {
+    font-size: 2rem;
+}
+
+.field-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.label {
+    align-self: flex-start;
+    font-size: 1.5rem;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    max-width: 800px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    background-color: transparent;
+}
 
 
 
