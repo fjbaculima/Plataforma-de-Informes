@@ -37,6 +37,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 50px;
 }
 
 
@@ -76,6 +77,15 @@ html {
     font-size: 2rem;
 }
 
+.container-h3 {
+    margin-top: 10px;
+}
+
+.h3 {
+    font-size: 1.8rem;
+}
+
+
 .field-input {
     width: 100%;
     display: flex;
@@ -91,9 +101,18 @@ html {
     margin-top: 10px;
 }
 
+.standard-data-container {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
 .label {
     align-self: flex-start;
     font-size: 1.5rem;
+}
+
+.label-checkbox {
+    margin-left: 10px;
 }
 
 .input {
