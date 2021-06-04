@@ -21,9 +21,16 @@
             </ul>
         </nav>
 
-        <div class="header-hamburger">
-            <button class="ham"></button>
+        <div class="header-main">
+            <div class="header-logo">
+                <a href="#"></a>
+            </div>
+
+            <div class="header-hamburger">
+                <button class="ham"></button>
+            </div>
         </div>
+
    </header>
 
    <main class="main">
@@ -77,6 +84,10 @@
                     <div class="project-data-container input-container">
                         <label class="label" for="address">Dirección</label>
                         <input class="input" type="text" name="address" id="address" placeholder="Calle, cantón, provincia...">
+                    </div>
+
+                    <div class="project-data-container input-container">
+                        <button class="button button-input" id="croquis">Subir croquis</button>
                     </div>
 
                 </div>
@@ -193,6 +204,11 @@
                     </div>
 
                     <div class="load-data-container input-container">
+                        <label class="label" for="seismicZone">Zona sísimica</label>
+                        <input class="input" type="text" name="seismicZone" id="seismicZone" placeholder="Zona sísmica: I, II, II, IV, V">
+                    </div>
+
+                    <div class="load-data-container input-container">
                         <label class="label" for="soilType">Tipo de suelo</label>
                         <select class="input" name="soilType" id="soilType">
                             <option value="A">A</option>
@@ -213,6 +229,106 @@
                         <input class="input" type="text" name="basal" id="basal" placeholder="Cortante basal">
                     </div>
                     
+                    <div class="load-data-container input-container">
+                        <label class="label" for="reducción">Factor de reducción</label>
+                        <input class="input" type="text" name="reductionFactor" id="reductionFactor" placeholder="Factor de reducción de respuesta">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="Z">Factor de aceleración de zona sísmica (Z)</label>
+                        <input class="input" type="text" name="Z" id="Z" placeholder="Factor Z">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="n">Relación de amplificación espectral (n)</label>
+                        <input class="input" type="text" name="n" id="n" placeholder="Relación de amplificación espectral">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="Ct">Coeficiente Ct</label>
+                        <input class="input" type="text" name="Ct" id="Ct" placeholder="Coeficiente Ct">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="alpha">Coeficiente para periodo (&alpha;)</label>
+                        <input class="input" type="text" name="alpha" id="alpha" placeholder="Coeficiente para periodo">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="Fa">Factor de sitio (Fa)</label>
+                        <input class="input" type="text" name="Fa" id="Fa" placeholder="Factor de sitio (Fa)">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="Fd">Factor de sitio (Fd)</label>
+                        <input class="input" type="text" name="Fd" id="Fd" placeholder="Factor de sitio (Fd)">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="Fs">Factor de comportamiento inelástico (Fs)</label>
+                        <input class="input" type="text" name="Fs" id="Fs" placeholder="Factor Fs">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="r">Factor asociado al Tr (r)</label>
+                        <input class="input" type="text" name="r" id="r" placeholder="Factor asociado al Tr (r)">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="phiP">Factor de irregularidad en planta (&Phi;p)</label>
+                        <input class="input" type="text" name="phiP" id="phiP" placeholder="Factor de irregularidad en planta">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="phiE">Factor de irregularidad en elevación (&Phi;e)</label>
+                        <input class="input" type="text" name="phiE" id="phiE" placeholder="Factor de irregularidad en elevación">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="g">Aceleración de la gravedad</label>
+                        <input class="input" type="text" name="g" id="g" placeholder="Aceleración de la gravedad (g)">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="T">Periodo método 1 (T)</label>
+                        <input class="input" type="text" name="T" id="T" placeholder="Periodo m[étodo 1 (T)">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="Tt">Periodo menor al método 2 (1.3T)</label>
+                        <input class="input" type="text" name="Tt" id="Tt" placeholder="Periodo menor al método 2 (1.3T)">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="TO">Periodo límite en T=TO</label>
+                        <input class="input" type="text" name="TO" id="TO" placeholder="TO">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="TC">Periodo límite en T=TC</label>
+                        <input class="input" type="text" name="TC" id="TC" placeholder="TC">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="TL">Periodo límite en T=TL</label>
+                        <input class="input" type="text" name="TL" id="TL" placeholder="TL">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="Sa">Aceleración en T=0 (Sa)</label>
+                        <input class="input" type="text" name="Sa" id="Sa" placeholder="Sa">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="Sao">Aceleración en T=TO (Sao)</label>
+                        <input class="input" type="text" name="Sao" id="Sao" placeholder="Sao">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="f">Factor de reducción (f)</label>
+                        <input class="input" type="text" name="f" id="f" placeholder="f">
+                    </div>
+
                 </div>
 
             </div>
@@ -293,9 +409,13 @@
                     </div>
 
 
-                    <div class="personal-data-container input-container">
+                    <!-- <div class="personal-data-container input-container">
                         <label class="label" for="imgModel">Imagen de modelo matemático</label>
                         <input class="input" type="text" name="ImgModel" id="ImgModel" placeholder="Cambia esto">
+                    </div> -->
+
+                    <div class="project-data-container input-container">
+                        <button class="button button-input" id="mathModel">Subir Modelo Matemático</button>
                     </div>
                 </div>
             </div>

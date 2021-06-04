@@ -28,7 +28,100 @@ html {
 .header {
     background-color: var(--secondary-color);
     color: var(--terciary-color);
+    height: 80px;
+    width: 100%;
 }
+
+.header-main {
+    width: 80%;
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    width: 60px;
+    height: 40px;
+    background-image: url('https://lh3.googleusercontent.com/proxy/rPoJoKYXOShCw-V7uC3LtZaWKXGY6VE1L7biybLKvI8uSBfGpO3pUA70YXS1WkRvQUEBQkr29ILgxH6AV5DV1YkTN4Q5fuxeSpfJO6vYJrdGUvCOm79RkkCyNYkJPImJ2pyNiu68cLj8MnQe8xgeDoU');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: absolute;
+    z-index: 1000;
+}
+
+.header .header-logo a{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+
+.header-hamburger {
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+
+/*ham*/
+
+.ham {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    background-image: url('https://i.ibb.co/jvwc14F/icons8-menu-48.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1000;
+}
+
+.showClose {
+    background-image: url('https://i.ibb.co/qN8LKgv/icons8-multiply-48.png');
+}
+
+.header-nav {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.header-list-container {
+    width: 80%;
+    height: 50%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+
+/* Fix styles of menu nav*/
+
+.showHeaderNav {
+    transform: translateY(0);
+}
+
+
+/**/
 
 .main {
     width: 100%;
@@ -99,6 +192,22 @@ html {
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+}
+
+.button-input{
+    height: 40px;
+    width: 180px;
+    align-self: flex-start;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    font-family: 'Poppins', sans-serif;
+    color: var(--background-color);
+    cursor: pointer;
+}
+
+.button-input:hover {
+    color: var(--terciary-color);
 }
 
 .standard-data-container {
