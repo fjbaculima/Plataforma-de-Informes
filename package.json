@@ -5,7 +5,8 @@
   "main": "./src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production"
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack --config webpack.config.dev.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,12 @@
     "@babel/plugin-transform-runtime": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
     "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^5.2.2",
+    "css-minimizer-webpack-plugin": "^2.0.0",
     "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.5.0",
+    "terser-webpack-plugin": "^5.1.4",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0"
   }

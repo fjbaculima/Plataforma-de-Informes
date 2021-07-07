@@ -13,6 +13,8 @@ import Concrete from './pages/Concrete'
 import About from './pages/About'
 import Error404 from './pages/Error404'
 
+import './styles/sytles.css'
+
 (async function App() {
     const header = null || document.querySelector('.header')
     header.innerHTML = await Header()
