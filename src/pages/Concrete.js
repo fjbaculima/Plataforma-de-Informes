@@ -84,6 +84,11 @@ const Concrete = () => {
                         <input type="checkbox" name="ASTM" id="ASTM">
                         <label class="label label-checkbox" for="ASTM">ASTM A706</label>
                     </div>
+
+                    <div class="standard-data-container input-container">
+                        <input type="checkbox" name="ASTM" id="ASTM">
+                        <input class="input" type="text" name="otraNorma" id="otraNorma" placeholder="Otra Norma">
+                    </div>
                 </div>
             </div>
 
@@ -103,7 +108,7 @@ const Concrete = () => {
                     </div>
 
                     <div class="container-h3">
-                        <h3 class="h3">Concreto</h3>
+                        <h3 class="h3">Acero</h3>
                     </div>
 
                     <div class="material-data-container input-container">
@@ -127,7 +132,7 @@ const Concrete = () => {
                 <div class="load-data-input field-input">
 
                     <div class="container-h3">
-                        <h3 class="h3">Cargas Gravitacionales</h3>
+                        <h3 class="h3">Cargas Gravitacionales Totales</h3>
                     </div>
 
                     <div class="load-data-container input-container">
@@ -151,7 +156,7 @@ const Concrete = () => {
                     </div>
 
                     <div class="container-h3">
-                        <h3 class="h3">Cargas sísmicas</h3>
+                        <h3 class="h3">Cargas Sísmicas</h3>
                     </div>
 
                     
@@ -296,6 +301,47 @@ const Concrete = () => {
                         <input class="input" type="text" name="f" id="f" placeholder="f">
                     </div>
 
+                    <div class="load-data-container input-container">
+                        <label class="label" for="movilizedMass">Porcentaje de masa movilizada</label>
+                        <input class="input" type="text" name="movilizedMass" id="movilizedMass" placeholder="Porcentaje de masa movilizada">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="personal-data field">
+                <div class="container-h2">
+                    <h2 class="h2">Datos Geotécnicos</h2>
+                </div>
+
+                <div class="geotech-data-input field-input">
+
+                    <div class="geotech-data-container input-container">
+                        <label class="label" for="qAd">Q admisible</label>
+                        <input class="input" type="text" name="qAd" id="projectName" placeholder="Q admisible">
+                    </div>
+
+                    <div class="geotech-data-container input-container">
+                        <label class="label" for="soilType">Tipo de suelo</label>
+                        <input class="input" type="text" name="soilType" id="soilType" placeholder="Suelo">
+                    </div>
+
+                    <div class="geotech-data-container input-container">
+                        <label class="label" for="angleFrict">Ángulo de fricción</label>
+                        <input class="input" type="text" name="angleFrict" id="angleFrict" placeholder="Ángulo de fricción">
+                    </div>
+
+                    <div class="geotech-data-container input-container">
+                        <label class="label" for="wet">Contenido de humedad</label>
+                        <input class="input" type="text" name="wet" id="wet" placeholder="Contenido de humedad">
+                    </div>
+
+
+                    <div class="geotech-data-container input-container">
+                        <button class="button button-input" id="soilProfile">Perfil de suelo</button>
+                    </div>
+
                 </div>
 
             </div>
@@ -378,6 +424,35 @@ const Concrete = () => {
                     <div class="project-data-container input-container">
                         <button class="button button-input" id="mathModel">Subir Modelo Matemático</button>
                     </div>
+
+                    <div class="project-data-container input-container">
+                        <button class="button button-input" id="deriveXY">Deriva de piso en X, Y</button>
+                    </div>
+
+                    <div class="project-data-container input-container">
+                        <button class="button button-input" id="basalXY">Cortante basal en X, Y</button>
+                    </div>
+
+                    <div class="project-data-container input-container">
+                        <button class="button button-input" id="movilizadaMassXY">Masa movilizada X, Y</button>
+                    </div>
+
+                    <div class="project-data-container input-container">
+                        <button class="button button-input" id="columnDist">Distribución de columnas</button>
+                    </div>
+
+                    <div class="project-data-container input-container">
+                        <button class="button button-input" id="demandCapacity">Relación demanda/capacidad</button>
+                    </div>
+
+                    <div class="project-data-container input-container">
+                        <button class="button button-input" id="demandCapacityBeams">Demanda/capacidad vigas</button>
+                    </div>
+
+                    <div class="project-data-container input-container">
+                        <button class="button button-input" id="foundation">Cimentación</button>
+                    </div>
+
                 </div>
             </div>
         </form>
