@@ -31,5 +31,9 @@
     "terser-webpack-plugin": "^5.1.4",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0"
+  },
+  "dependencies": {
+    "pdfkit": "^0.12.1",
+    "pdfmake": "^0.1.70"
   }
 }

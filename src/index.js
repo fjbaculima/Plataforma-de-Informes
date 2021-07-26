@@ -6,6 +6,15 @@ import getPath from './utils/getPath'
 import resolveRoute from './utils/resolveRoute'
 import Footer from './templates/Footer'
 
+import croquisRenderInput from './templates/croquisRenderInput'
+import report from './utils/report'
+
+
+/* import pdfMake from "pdfmake/build/pdfmake";
+import pdfFonts from "pdfmake/build/vfs_fonts";
+pdfMake.vfs = pdfFonts.pdfMake.vfs; */
+
+
 
 import Home from './pages/Home'
 import Steel from './pages/Steel'
@@ -65,14 +74,23 @@ import './styles/sytles.css'
 
     window.addEventListener('load', renderHome)
 
+    //const concreteReportGen = await document.querySelector('#genPDF')
 
-    /* const buttonSteel = await document.querySelector('#steel-home-button')
-    const buttonConcrete = await document.querySelector('#concrete-home-button')
+    concrete.addEventListener('click', () => {
+        const concreteReportGen =  document.querySelector('#genPDF')
+        concreteReportGen.addEventListener('click', report)
+    })
 
-    buttonSteel.addEventListener('click', renderSteel)
-    buttonConcrete.addEventListener('click', renderConcrete) */
+    
 
-    //window.addEventListener('hashchange', router)
+    //let mostrarReporte = await report()
+
+    
+
+
+
+    
+
 })()  
 
 

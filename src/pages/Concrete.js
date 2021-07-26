@@ -17,8 +17,8 @@ const Concrete = () => {
                     </div>
 
                     <div class="personal-data-container input-container">
-                        <label class="label" for="name">Tu registro de la Senescyt</label>
-                        <input class="input" type="text" name="name" id="name" placeholder="Número de registro">
+                        <label class="label" for="senescytCode">Tu registro de la Senescyt</label>
+                        <input class="input" type="text" name="senescytCode" id="senescytCode" placeholder="Número de registro">
                     </div>
 
                     <div class="personal-data-container input-container"> 
@@ -53,8 +53,17 @@ const Concrete = () => {
                         <input class="input" type="text" name="address" id="address" placeholder="Calle, cantón, provincia...">
                     </div>
 
-                    <div class="project-data-container input-container">
-                        <button class="button button-input" id="croquis">Subir croquis</button>
+                    <!-- <div class="project-data-container input-container">
+                        <button type="button" class="button button-input" id="croquisButton">Subir croquis</button> 
+                    </div> -->
+
+                    <div class="project-data-container input-container" id="croquisRenderInput">
+                    
+                        <label class="label" for="croquisInput">Sube una imagen del croquis</label>
+                        <input class="inputFile" type="file" name="croquisInput" id="croquisInput">
+
+                        <div id="croquisDisplayArea"></div>
+
                     </div>
 
                 </div>
@@ -421,9 +430,19 @@ const Concrete = () => {
                     <input class="input" type="text" name="sistemaEstructural" id="sistemaEstructural" placeholder="Aporticado" value="Aporticado">
                     </div>
 
-                    <div class="project-data-container input-container">
+                    <!-- <div class="project-data-container input-container">
                         <button class="button button-input" id="mathModel">Subir Modelo Matemático</button>
+                    </div> -->
+
+                    <div class="project-data-container input-container">
+                    
+                        <label class="label" for="mathModel">Sube el modelo matemático</label>
+                        <input class="inputFile" type="file" name="mathModel" id="mathModel">
+
+                        <div id="croquisDisplayArea"></div>
+
                     </div>
+
 
                     <div class="project-data-container input-container">
                         <button class="button button-input" id="deriveXY">Deriva de piso en X, Y</button>
@@ -453,6 +472,14 @@ const Concrete = () => {
                         <button class="button button-input" id="foundation">Cimentación</button>
                     </div>
 
+                </div>
+            </div>
+
+            <div class="generate-pdf field">
+                <div class="field-input">
+                    <div class="project-data-container input-container">
+                        <button type="button" class="button button-input" id="genPDF">Generar Informe</button>
+                    </div>
                 </div>
             </div>
         </form>
