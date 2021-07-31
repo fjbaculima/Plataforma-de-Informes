@@ -24,9 +24,9 @@ const Concrete = () => {
                     <div class="personal-data-container input-container"> 
                         <label class="label" for="profession">Tu profesión</label>
                         <select class="input" name="profession" id="profession">
-                            <option  value="ingenieroCivil">Ingeniera/o Civil</option>
-                            <option value="ingenieroMecanico">Ingeniera/o Mecánica/o</option>
-                            <option value="arquitecto">Arquitecta/o</option>
+                            <option  value="ingenieroCivil">Ingeniería Civil</option>
+                            <option value="ingenieroMecanico">Ingeniería Mecánica</option>
+                            <option value="arquitecto">Arquitectura</option>
                         </select>
                     </div>  
                 </div>
@@ -59,10 +59,8 @@ const Concrete = () => {
 
                     <div class="project-data-container input-container" id="croquisRenderInput">
                     
-                        <label class="label" for="croquisInput">Sube una imagen del croquis</label>
-                        <input class="inputFile" type="file" name="croquisInput" id="croquisInput">
-
-                        <div id="croquisDisplayArea"></div>
+                        <label class="label" for="croquisInput">Sube la URL de la imagen del croquis</label>
+                        <input class="input" type="text" name="croquisInput" id="croquisInput" placeholder="Croquis URL">
 
                     </div>
 
@@ -95,7 +93,7 @@ const Concrete = () => {
                     </div>
 
                     <div class="standard-data-container input-container">
-                        <input type="checkbox" name="ASTM" id="ASTM">
+                        <input type="checkbox" name="otraNorma" id="otraNormaCheckbox">
                         <input class="input" type="text" name="otraNorma" id="otraNorma" placeholder="Otra Norma">
                     </div>
                 </div>
@@ -315,6 +313,16 @@ const Concrete = () => {
                         <input class="input" type="text" name="movilizedMass" id="movilizedMass" placeholder="Porcentaje de masa movilizada">
                     </div>
 
+                    <div class="load-data-container input-container">
+                        <label class="label" for="vibrationModes">Número de modos de vibración</label>
+                        <input class="input" type="text" name="vibrationModes" id="vibrationModes" placeholder="Modos de vibración">
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="vibrationModesNinety">Número de modos de vibración para llegar al 90% de masa movilizada</label>
+                        <input class="input" type="text" name="vibrationModesNinety" id="vibrationModesNinety" placeholder="Modos de vibración para alcanzar el 90% de masa movilizada">
+                    </div>
+
                 </div>
 
             </div>
@@ -328,12 +336,12 @@ const Concrete = () => {
 
                     <div class="geotech-data-container input-container">
                         <label class="label" for="qAd">Q admisible</label>
-                        <input class="input" type="text" name="qAd" id="projectName" placeholder="Q admisible">
+                        <input class="input" type="text" name="qAd" id="qAd" placeholder="Q admisible">
                     </div>
 
                     <div class="geotech-data-container input-container">
-                        <label class="label" for="soilType">Tipo de suelo</label>
-                        <input class="input" type="text" name="soilType" id="soilType" placeholder="Suelo">
+                        <label class="label" for="geotechSoilType">Tipo de suelo</label>
+                        <input class="input" type="text" name="geotechSoilType" id="geotechSoilType" placeholder="Suelo">
                     </div>
 
                     <div class="geotech-data-container input-container">
@@ -346,9 +354,11 @@ const Concrete = () => {
                         <input class="input" type="text" name="wet" id="wet" placeholder="Contenido de humedad">
                     </div>
 
-
                     <div class="geotech-data-container input-container">
-                        <button class="button button-input" id="soilProfile">Perfil de suelo</button>
+                    
+                        <label class="label" for="geotechSoilProfileInput">Sube la URL de la imagen del perfil de suelo</label>
+                        <input class="input" type="text" name="geotechSoilProfileInput" id="geotechSoilProfileInput" placeholder="Perfil de suelo URL">
+
                     </div>
 
                 </div>
