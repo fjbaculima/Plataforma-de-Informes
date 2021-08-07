@@ -1,7 +1,7 @@
 const Footer = ()=> {
     const view = `
         <div class="footer-container">
-            <p class="footer-container-p">Desarrollado por <a href="https://twitter.com/axlyaguana11" target="_blank">Axel Yaguana</a> y <a href="https://twitter.com/Francis21312" target="_blank">Francisco Baculima</a></p>
+            <p class="footer-container-p">Desarrollado por <a href="https://twitter.com/axlyaguana11" target="_blank">Axel Yaguana</a> y <a href="https://twitter.com/fjbaculima11" target="_blank">Francisco Baculima</a></p>
             <ul class="footer-list-container">
                 <li class="footer-list-item">
                     <a href="https://github.com/fjbaculima/Plataforma-de-Informes/tree/optimizations" target="_blank">GitHub</a>

@@ -143,6 +143,22 @@ const report = () => {
         var userEQ7Combination = ''
     }
 
+    let userDisplacement = document.querySelector('#displacement')
+
+    let userSoftware = document.querySelector('#software')
+    let userSistemaEstructural = document.querySelector('#sistemaEstructural')
+    let userMathModel = document.querySelector('#mathModel')
+    let userDeriveX = document.querySelector('#deriveX')
+    let userDeriveY = document.querySelector('#deriveY')
+    let userBasalX = document.querySelector('#basalX')
+    let userBasalY = document.querySelector('#basalY')
+    let userMovilizadaMassX = document.querySelector('#movilizadaMassX')
+    let userMovilizadaMassY = document.querySelector('#movilizadaMassY')
+    let userColumnDist = document.querySelector('#columnDist')
+    let userDemandCapacity = document.querySelector('#demandCapacity')
+    let userDemandCapacityBeams = document.querySelector('#demandCapacityBeams')
+    let userFoundation = document.querySelector('#foundation')
+
 
     const elTexto = {
         content: [
@@ -159,7 +175,7 @@ const report = () => {
 
             {
                 image: 'croquis',
-                width: 400
+                width: 525
             },
 
             ' ',
@@ -256,7 +272,7 @@ const report = () => {
             
             {
                 image: 'seismicZonesEcuador',
-                width: 400
+                width: 525
             },
 
             ' ',
@@ -290,7 +306,7 @@ const report = () => {
 
             {
                 image: 'designSpectrum',
-                width: 400
+                width: 525
             },
 
             ' ',
@@ -307,7 +323,7 @@ const report = () => {
                         ['Factor de aceleración de la zona sísmica', 'Z', userZ.value, 'g', 'Tabla1, Sec.3.1.1'],
                         ['Relación de amplificación espectral', 'n', userN.value, 's.u.', 'Sec.3.1.3.1'],
                         ['Coeficiente Ct', 'Ct', userCt.value, 's.u.', 'Sec.6.3.3'],
-                        ['Coeficiente para periodo', 'α', userImportanceCoeff.value, 's.u.', 'Sec.6.3.3'],
+                        ['Coeficiente para periodo', 'α', userAlpha.value, 's.u.', 'Sec.6.3.3'],
                         ['Tipo de suelo', ' ', userSoilType.value, 's.u.', 'Tabla 2, Sec.3.2.1'],
                         ['Factor de sitio Fa', 'Fa', userFa.value, 's.u.', 'Tabla 3, Sec.3.2.2'],
                         ['Factor de sitio Fd', 'Fd', userFd.value, 's.u.', 'Tabla 4, Sec.3.2.2'],
@@ -359,7 +375,7 @@ const report = () => {
 
             {
                 image: 'soilProfile',
-                width: 400
+                width: 525
             },
 
             {
@@ -411,10 +427,149 @@ const report = () => {
             {
                 text: 'Derivas admisibles',
                 style: 'header'
-            }
+            }, 
 
+            {
+                text: 'De acuerdo al NEC-SE-DS numeral 4.2.2, se define el límite de la deformación de piso relativa a su altura de 0.02 como se observa en la Tabla 8',
+                style: 'paragraph'
+            },
 
+            ' ',
 
+            {
+                ul: [
+                    userDisplacement.options[userDisplacement.selectedIndex].text
+                ]
+            },
+
+            {
+                text: 'Modelo matemático',
+                style: 'header'
+            },
+
+            {
+                text: `El modelo tridimensional de la estructura fue desarrollado con el software ${userSoftware.value}, desarollando un sistema ${userSistemaEstructural.value} para columnas y vigas.`,
+                style: 'paragraph'
+            },
+
+            ' ',
+
+            {
+                text: 'Modelo matemático',
+                style: 'subHeader'
+            },
+
+            ' ',
+
+            {
+                image: 'mathModelo',
+                width: 525
+            },
+
+            {
+                text: 'Derivas de piso en X, Y',
+                style: 'subHeader'
+            },
+
+            {
+                image: 'derivaX',
+                width: 525
+            },
+
+            ' ',
+
+            {
+                image: 'derivaY',
+                width: 525
+            },
+
+            ' ',
+
+            {
+                text: 'Cortante basal en X, Y',
+                style: 'subHeader'
+            },
+
+            {
+                image: 'cortanteBasalX',
+                width: 525
+            },
+
+            ' ',
+
+            {
+                image: 'cortanteBasalY',
+                width: 525
+            },
+
+            ' ',
+
+            {
+                text: 'Masa movilizada en X, Y',
+                style: 'subHeader'
+            },
+
+            {
+                image: 'movilizadaX',
+                width: 525
+            },
+
+            ' ',
+
+            {
+                image: 'movilizadaY',
+                width: 525
+            },
+
+            ' ',
+
+            {
+                text: 'Distribución de columnas',
+                style: 'subHeader'
+            },
+
+            {
+                image: 'columnDistro',
+                width: 525
+            },
+
+            ' ',
+
+            {
+                text: 'Relación demanda/capaidad en columnas',
+                style: 'subHeader'
+            },
+
+            {
+                image: 'demandaCapCol',
+                width: 525
+            },
+
+            ' ',
+
+            {
+                text: 'Relación demanda/capaidad en vigas',
+                style: 'subHeader'
+            },
+
+            {
+                image: 'demandaCapBeam',
+                width: 525
+            },
+
+            ' ',
+
+            {
+                text: 'Cimentación',
+                style: 'subHeader'
+            },
+
+            {
+                image: 'foundationImage',
+                width: 525
+            },
+
+            ' '
            
              
         ],
@@ -442,7 +597,18 @@ const report = () => {
             croquis: croquisUser.value,
             seismicZonesEcuador: 'https://i.ibb.co/0CTX04S/seismic-Zones-Ecuador-NEC15.png',
             designSpectrum: 'https://i.ibb.co/SV6HGj8/design-Spectrum-NEC15.png',
-            soilProfile: userGeotechSoilProfileInput.value
+            soilProfile: userGeotechSoilProfileInput.value,
+            mathModelo: userMathModel.value,
+            derivaX: userDeriveX.value,
+            derivaY: userDeriveY.value,
+            cortanteBasalX: userBasalX.value,
+            cortanteBasalY: userBasalY.value,
+            movilizadaX: userMovilizadaMassX.value,
+            movilizadaY: userMovilizadaMassY.value,
+            columnDistro: userColumnDist.value,
+            demandaCapCol: userDemandCapacity.value,
+            demandaCapBeam: userDemandCapacityBeams.value,
+            foundationImage: userFoundation.value
         }
     }
 

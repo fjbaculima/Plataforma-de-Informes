@@ -444,42 +444,47 @@ const Concrete = () => {
                         <button class="button button-input" id="mathModel">Subir Modelo Matemático</button>
                     </div> -->
 
-                    <div class="project-data-container input-container">
-                    
-                        <label class="label" for="mathModel">Sube el modelo matemático</label>
-                        <input class="inputFile" type="file" name="mathModel" id="mathModel">
-
-                        <div id="croquisDisplayArea"></div>
-
+                    <div                        class="personal-data-contain    er input-container">
+                        <label class="label" for="mathModel">Modelo matemático</label>
+                        <input class="input" type="text" name="mathModel" id="mathModel" placeholder="URL del modelo matemático">
                     </div>
 
-
-                    <div class="project-data-container input-container">
-                        <button class="button button-input" id="deriveXY">Deriva de piso en X, Y</button>
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="deriveX">Derivas de piso en X y Y</label>
+                        <input class="input" type="text" name="deriveX" id="deriveX" placeholder="URL de la deriva de piso en X">
+                        <input class="input" type="text" name="deriveY" id="deriveY" placeholder="URL de la deriva de piso en Y">
                     </div>
 
-                    <div class="project-data-container input-container">
-                        <button class="button button-input" id="basalXY">Cortante basal en X, Y</button>
+                    <div class="personal-data-container input-container">
+                    <label class="label" for="basalX">Cortante basal X, Y</label>
+                    <input class="input" type="text" name="basalX" id="basalX" placeholder="URL del cortante basal en X">
+                    <input class="input" type="text" name="basalY" id="basalY" placeholder="URL del cortante basal en Y">
                     </div>
 
-                    <div class="project-data-container input-container">
-                        <button class="button button-input" id="movilizadaMassXY">Masa movilizada X, Y</button>
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="movilizadaMassX">Masa movilizada X, Y</label>
+                        <input class="input" type="text" name="movilizadaMassX" id="movilizadaMassX" placeholder="URL de la masa movilizada en X">
+                        <input class="input" type="text" name="movilizadaMassY" id="movilizadaMassY" placeholder="URL de la masa movilizada en Y">
                     </div>
 
-                    <div class="project-data-container input-container">
-                        <button class="button button-input" id="columnDist">Distribución de columnas</button>
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="columnDist">Distribución de columnas</label>
+                        <input class="input" type="text" name="columnDist" id="columnDist" placeholder="URL de la distribución de columnas">
                     </div>
 
-                    <div class="project-data-container input-container">
-                        <button class="button button-input" id="demandCapacity">Relación demanda/capacidad</button>
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="demandCapacity">Relación demanda/capacidad de columnas</label>
+                        <input class="input" type="text" name="demandCapacity" id="demandCapacity" placeholder="URL de la demanda/capacidad de columnas">
                     </div>
 
-                    <div class="project-data-container input-container">
-                        <button class="button button-input" id="demandCapacityBeams">Demanda/capacidad vigas</button>
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="demandCapacityBeams">Relación demanda/capacidad de vigas</label>
+                        <input class="input" type="text" name="demandCapacityBeams" id="demandCapacityBeams" placeholder="URL de la demanda/capacidad de vigas">
                     </div>
 
-                    <div class="project-data-container input-container">
-                        <button class="button button-input" id="foundation">Cimentación</button>
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="foundation">Cimentación</label>
+                        <input class="input" type="text" name="foundation" id="foundation" placeholder="URL de la cimentación">
                     </div>
 
                 </div>
