@@ -161,10 +161,64 @@ const report = () => {
 
 
     const elTexto = {
+        footer: function(currentPage) { return {text:`${currentPage.toString()}`, alignment:'center'} },
+
         content: [
+
+            {
+                toc: {
+                  title: {text: 'Contenidos', style: 'header' }
+                }
+            },
+
+            {
+                text: `
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+
+
+
+
+
+
+
+
+                `
+            },
+
             {
                 text: 'Antecedentes',
-                style: 'header'
+                style: 'header',
+                tocItem: true
             },
             {
                 text: `${userCustomer.value} en calidad de cliente ha contratado los servicios profesionales de ${userName.value}, profesional de la ${userProffesion.options[userProffesion.selectedIndex].text} que tiene como registro de senescyt el ${userSenescyt.value} para el diseño estructural del proyecto ${userProject.value} que se ubica en ${userAddress.value}.`,
@@ -182,7 +236,8 @@ const report = () => {
 
             {
                 text: 'Normas de diseño',
-                style: 'header'
+                style: 'header',
+                tocItem: true
             },
 
             {
@@ -201,7 +256,8 @@ const report = () => {
 
             {
                 text: 'Materiales',
-                style: 'header'
+                style: 'header',
+                tocItem: true
             },
 
             {
@@ -239,7 +295,8 @@ const report = () => {
 
             {
                 text: 'Cargas',
-                style: 'header'
+                style: 'header',
+                tocItem: true
             },
 
             {
@@ -306,7 +363,7 @@ const report = () => {
 
             {
                 image: 'designSpectrum',
-                width: 525
+                width: 500
             },
 
             ' ',
@@ -352,7 +409,8 @@ const report = () => {
 
             {
                 text: 'Datos geotécnicos',
-                style: 'header'
+                style: 'header',
+                tocItem: true
             },
 
             {
@@ -380,7 +438,8 @@ const report = () => {
 
             {
                 text: 'Combinaciones de cargas de diseño',
-                style: 'header'
+                style: 'header',
+                tocItem: true
             },
 
             {
@@ -426,7 +485,8 @@ const report = () => {
 
             {
                 text: 'Derivas admisibles',
-                style: 'header'
+                style: 'header',
+                tocItem: true
             }, 
 
             {
@@ -444,7 +504,8 @@ const report = () => {
 
             {
                 text: 'Modelo matemático',
-                style: 'header'
+                style: 'header',
+                tocItem: true
             },
 
             {

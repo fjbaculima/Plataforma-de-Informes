@@ -184,7 +184,7 @@ const Concrete = () => {
 
                     <div class="load-data-container input-container">
                         <label class="label" for="seismicZone">Zona sísimica</label>
-                        <input class="input" type="text" name="seismicZone" id="seismicZone" placeholder="Zona sísmica: I, II, II, IV, V">
+                        <input class="input" type="text" name="seismicZone" id="seismicZone" placeholder="Zona sísmica: I, II, III, IV, V">
                     </div>
 
                     <div class="load-data-container input-container">
