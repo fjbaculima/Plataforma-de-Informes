@@ -1,9 +1,9 @@
-# Generate a Structural Engineering Report
+# Generate a Structural Engineering Report: SlimFile
 
-_Structural Report_ is a software aimed to help structural engineers to create their reports. This first version considers standards of Ecuador only. It is created as a thesis project for the department of Civil Engineering at [Universidad Técnica Particular de Loja](https://www.utpl.edu.ec/en).
+_SlimFile_ is a software aimed to help structural engineers to create their reports. This first version considers standards of Ecuador only. It is created as a thesis project for the department of Civil Engineering at [Universidad Técnica Particular de Loja](https://www.utpl.edu.ec/en).
 
 
-_Structural Report_ is built as a SPA using JavaScript Vanilla. 
+_SlimFile_ is built as a SPA using JavaScript Vanilla and [pdfmake](http://pdfmake.org/#/) a client/server side PDF printing in pure JavaScript library. 
 
 ## Usage
 
@@ -29,8 +29,8 @@ You can donate to help the project to grow. Support at Patreon.
 Not available by now. The project is under construction.
 
 ## About the Authors
-* [Francisco Baculima](https://twitter.com/Francis21312) is a civil engineering student specialist in software development for engineering purposes.
-* [Axel Yaguana](https://twitter.com/axlyaguana11) is a civil engineering student who focuses on algorithms and applied mathematics for machine learning.
+* [Francisco Baculima](https://twitter.com/fjbaculima11) is a civil engineering student specialist in software development for engineering purposes.
+* [Axel Yaguana](https://twitter.com/axlyaguana11) is a civil engineering student who focuses on data analysis and statistical models. He also studies data science.
 
 ## Aknowledgements
-* [Henrry Rojas](https://twitter.com/henrryhr7), professor and researcher of civil engineering at Universidad Técnica Particular de Loja.
+* [Henrry Rojas](https://twitter.com/henrryhr7), professor, PhD candidate and researcher of civil engineering at Universidad Técnica Particular de Loja.

@@ -9,6 +9,40 @@ const report = () => {
     let userCustomer = document.querySelector('#client')
     let userAddress = document.querySelector('#address')
     let croquisUser = document.querySelector('#croquisInput')
+    let userFloors = document.querySelector('#floors')
+    let userUnderground = document.querySelector('#underground')
+    let userElevation = document.querySelector('#elevation')
+    let userCategory = document.querySelector('#category')
+    let userUsage = document.querySelector('#usage')
+    let userConstructionArea = document.querySelector('#constructionArea')
+
+    if(userUnderground.checked === true) {
+        var userUndergroundBuild = 'sí'
+    } else {
+        var userUndergroundBuild = 'no'
+    }
+
+    let userUndergroundLevel = document.querySelector('#undergroundLevel')
+    let userGroundFloorLevel = document.querySelector('#groundFloorLevel')
+    let userFirstFloorLevel = document.querySelector('#firstFloorLevel')
+    let userSecondFloorLevel = document.querySelector('#secondFloorLevel')
+    let userThirdFloorLevel = document.querySelector('#thirdFloorLevel')
+    let userFourthFloorLevel =  document.querySelector('#fourthFloorLevel')
+
+    let userUndergroundArea = document.querySelector('#undergroundArea')
+    let userGroundFloorArea = document.querySelector('#groundFloorArea')
+    let userFirstFloorArea = document.querySelector('#firstFloorArea')
+    let userSecondFloorArea = document.querySelector('#secondFloorArea')
+    let userThirdFloorArea = document.querySelector('#thirdFloorArea')
+    let userFourthFloorArea =  document.querySelector('#fourthFloorArea')
+
+    let userUndergroundUsage = document.querySelector('#undergroundUsage')
+    let userGroundFloorUsage = document.querySelector('#groundFloorUsage')
+    let userFirstFloorUsage = document.querySelector('#firstFloorUsage')
+    let userSecondFloorUsage = document.querySelector('#secondFloorUsage')
+    let userThirdFloorUsage = document.querySelector('#thirdFloorUsage')
+    let userFourthFloorUsage =  document.querySelector('#fourthFloorUsage')
+
 
     let userNEC15 = document.querySelector('#NEC15')
     let userACI = document.querySelector('#ACI')
@@ -87,6 +121,12 @@ const report = () => {
     let userVibrationModes = document.querySelector('#vibrationModes')
     let userVibrationModesNinety = document.querySelector('#vibrationModesNinety')
 
+    let userWindCoefHeight = document.querySelector('#windCoefHeight')
+    let userWindCoefIncl = document.querySelector('#windCoefIncl')
+    let userWindCoefLocation = document.querySelector('#windCoefLocation')
+    let userWindPressureBar = document.querySelector('#windPressureBar')
+    let userWindPressureSot = document.querySelector('#windPressureSot')
+
     let userQAd = document.querySelector('#qAd')
     let userGeotechSoilType = document.querySelector('#geotechSoilType')
     let userAngleFrict = document.querySelector('#angleFrict')
@@ -159,6 +199,38 @@ const report = () => {
     let userDemandCapacityBeams = document.querySelector('#demandCapacityBeams')
     let userFoundation = document.querySelector('#foundation')
 
+    //
+
+    let userMainBeamCover = document.querySelector('#mainBeamCover')
+    let userMainBeamBase = document.querySelector('#mainBeamBase')
+    let userMainBeamHeight = document.querySelector('#mainBeamHeight')
+    let userMainBeamUpperDiam = document.querySelector('#mainBeamUpperDiam')
+    let userMainBeamUpperNum = document.querySelector('#mainBeamUpperNum')
+    let userMainBeamLowerDiam = document.querySelector('#mainBeamLowerDiam')
+    let userMainBeamLowerNum = document.querySelector('#mainBeamLowerNum')
+    let userSecondaryBeamCover = document.querySelector('#secondaryBeamCover')
+    let userSecondaryBeamBase = document.querySelector('#secondaryBeamBase')
+    let userSecondaryBeamHeight = document.querySelector('#secondaryBeamHeight')
+    let userSecondaryBeamUpperDiam = document.querySelector('#secondaryBeamUpperDiam')
+    let userSecondaryBeamUpperNum = document.querySelector('#secondaryBeamUpperNum')
+    let userSecondaryBeamLowerDiam = document.querySelector('#secondaryBeamLowerDiam')
+    let userSecondaryBeamLowerNum = document.querySelector('#secondaryBeamLowerNum')
+
+    let userColumnCover = document.querySelector('#columnCover')
+    let userColumnBase = document.querySelector('#columnBase')
+    let userColumnHeight = document.querySelector('#columnHeight')
+    let userColumnSteelArea = document.querySelector('#columnSteelArea')
+
+    let userSlabThickness = document.querySelector('#slabThickness')
+
+    let userFoundationSoftware = document.querySelector('#foundationSoftware')
+    let userFoundationType = document.querySelector('#foundationType')
+    let userFoundationDepth = document.querySelector('#foundationDepth')
+    let userFoundationImage = document.querySelector('#foundationImage')
+    let userFoundationDeformationX = document.querySelector('#foundationDeformationX')
+    let userFoundationDeformationY = document.querySelector('#foundationDeformationY')
+
+    let userConclusions = document.querySelector('#conclusions')
 
     const elTexto = {
         footer: function(currentPage) { return {text:`${currentPage.toString()}`, alignment:'center'} },
@@ -209,9 +281,6 @@ const report = () => {
 
 
 
-
-
-
                 `
             },
 
@@ -221,7 +290,7 @@ const report = () => {
                 tocItem: true
             },
             {
-                text: `${userCustomer.value} en calidad de cliente ha contratado los servicios profesionales de ${userName.value}, profesional de la ${userProffesion.options[userProffesion.selectedIndex].text} que tiene como registro de senescyt el ${userSenescyt.value} para el diseño estructural del proyecto ${userProject.value} que se ubica en ${userAddress.value}.`,
+                text: `${userCustomer.value} en calidad de cliente ha contratado los servicios profesionales de ${userName.value}, profesional de la ${userProffesion.options[userProffesion.selectedIndex].text} que tiene como registro de senescyt el ${userSenescyt.value} para el diseño estructural del proyecto ${userProject.value} de ${userFloors.value} plantas con una elevación de ${userElevation.value} m de altura en total, mediante el uso del material Concreto Reforzado, que genere una estructura conformada por vigas, columnas y losas la cual presente disipación sísmica y comportamiento adecuado ante estas fuerzas laterales con incursión en rango no lineal sin pérdida de rigidez y resistencia, a través de un diseño por desempeño para la categoría ${userCategory.options[userCategory.selectedIndex].text}. El uso que se le dará a la edificación es ${userUsage.value} y, en caso de sismo, esta debe garantizar la integridad física de sus ocupantes. El proyecto se ubica en ${userAddress.value}.`,
                 style: 'paragraph'
             },
 
@@ -235,10 +304,78 @@ const report = () => {
             ' ',
 
             {
+                text: 'Detalles del proyecto',
+                style: 'header',
+                tocItem: true
+            },
+
+            {
+                text: 'Las características principales del proyecto estructural se resumen en la siguiente tabla.',
+                style: 'paragraph'
+            },
+
+            ' ',
+
+            {
+                table: {
+                    headerRows: 1,
+                    body: [
+                        [{text: 'Característica', style: 'tableHeader'}, {text: 'Descipción', style: 'tableHeader'}],
+                        ['Material estructural', 'Concreto Reforzado'],
+                        ['Número de plantas', userFloors.value],
+                        ['Área total de construcción', `${userConstructionArea.value} m²`],
+                        ['Subsuelo', userUndergroundBuild],
+                        ['Elevación', `${userElevation.value} m`],
+                        ['Categoría de la estructura', userCategory.options[userCategory.selectedIndex].text],
+                        ['Tipo de uso', userUsage.value]
+                    ]
+                }
+            },
+
+            ' ',
+            ' ',
+
+            {
+                text: 'Características por planta',
+                style: 'subHeader'
+            },
+
+            {
+                text: `Según los planos arquitectónicos, la edificación de ${userFloors.value} plantas presenta sus características por planta de la siguiente manera.`,
+                style: 'paragraph'
+            },
+
+            ' ',
+
+            {
+                table: {
+                    headerRows: 1,
+                    body: [
+                        [{text: 'Planta', style: 'tableHeader'}, {text: 'Nivel (m)', style: 'tableHeader'}, {text: 'Área (m²)', style: 'tableHeader'}, {text: 'Uso', style: 'tableHeader'}],
+                        ['Subsuelo', userUndergroundLevel.value, userUndergroundArea.value, userUndergroundUsage.value],
+                        ['Planta baja', userGroundFloorLevel.value, userGroundFloorArea.value, userGroundFloorUsage.value],
+                        ['Primera planta alta', userFirstFloorLevel.value, userFirstFloorArea.value, userFirstFloorUsage.value],
+                        ['Segunda planta alta', userSecondFloorLevel.value, userSecondFloorArea.value, userSecondFloorUsage.value],
+                        ['Tercera planta alta', userThirdFloorLevel.value, userThirdFloorArea.value, userThirdFloorUsage.value],
+                        ['Cuarta planta alta', userFourthFloorLevel.value, userFourthFloorArea.value, userFourthFloorUsage.value],
+                    ]
+                }
+            },
+
+            ' ',
+
+            {
                 text: 'Normas de diseño',
                 style: 'header',
                 tocItem: true
             },
+
+            {
+                text: `El diseño del proyecto ${userProject.value} se efectuó con base en los códigos y normativas nacionales e internacionales que se aplican en el territorio nacional. Estas son: `,
+                style: 'paragraph'
+            },
+
+            ' ',
 
             {
                 ul: [
@@ -259,6 +396,13 @@ const report = () => {
                 style: 'header',
                 tocItem: true
             },
+
+            {
+                text: 'Los materiales estructurales cumplen con los estándares mínimos de calidad para su correcto desempeño. A continuación se resumen las propiedades principales.',
+                style: 'paragraph'
+            },
+
+            ' ',
 
             {
                 text: 'Hormigón',
@@ -314,6 +458,9 @@ const report = () => {
             },
 
             ' ',
+            ' ',
+            ' ',
+            ' ',
 
             {
                 text: 'Cargas sísimicas',
@@ -329,7 +476,7 @@ const report = () => {
             
             {
                 image: 'seismicZonesEcuador',
-                width: 525
+                width: 300
             },
 
             ' ',
@@ -405,6 +552,79 @@ const report = () => {
                 }
             },
 
+            ' ',
+
+            {
+                text: 'Cargas de viento',
+                style: 'subHeader'
+            },
+
+            {
+                text: `Conforme se establece en la normativa NEC 2015, en su apartado 3.2.4., la velocidad del viento para cualquier tipo de estructura no será menor que 75 km/h (21 m/s). Por lo tanto, para este estudio se adopta una carga de viento con una velocidad de 21 m/s. La velocidad de la corrección del viento se realiza aplicando Vb = Vins × σ. El coeficiente σ se obtiene de la tabla siguiente:`,
+                style: 'paragraph'
+            },
+
+            ' ',
+
+            {
+                image: 'windCoeff',
+                width: 400
+            },
+
+            ' ',
+
+            {
+                text: 'Además, es necesario calcular la presión en kN/m² en sentido positivo hacia la estructura o barlovento y negativo o sotavente mediante la ecuación Pb = 0.5 × p × Vb2 × Ce × Cf.'
+            },
+
+            ' ',
+
+            {
+                text: 'El coeficiente Cf está en función de la inclinación de la estructura y lo encontramos mediante la siguente tabla:',
+                style: 'paragraph'
+            },
+
+            ' ',
+
+            {
+                image: 'CfTableImage',
+                width: 400
+            },
+
+            ' ',
+
+            {
+                text: 'Por otra parte, el coeficiente C𝑒 se obtuvo de la tabla siguiente:',
+                style: 'paragraph'
+            },
+
+            ' ',
+
+            {
+                image: 'CeTableImage',
+                width: 500
+            },
+
+            ' ',
+
+            {
+                text: 'Entonces, las cargas de viento se resumen en lo siguiente:',
+                style: 'paragraph'
+            },
+
+            ' ',
+
+            {
+                ul: [
+                    `Coeficiente σ: ${userWindCoefHeight.value}.`,
+                    `Coeficiente Cf: ${userWindCoefIncl.value}.`,
+                    `Coeficiente Ce: ${userWindCoefLocation.value}.`,
+                    `Presión a barlovento: ${userWindPressureBar.value} kN/m².`,
+                    `Presión a sotavento: ${userWindPressureSot.value} kN/m².`
+                ]
+            },
+
+            ' ',
             ' ',
 
             {
@@ -502,6 +722,8 @@ const report = () => {
                 ]
             },
 
+            ' ',
+
             {
                 text: 'Modelo matemático',
                 style: 'header',
@@ -534,14 +756,14 @@ const report = () => {
 
             {
                 image: 'derivaX',
-                width: 525
+                width: 300
             },
 
             ' ',
 
             {
                 image: 'derivaY',
-                width: 525
+                width: 300
             },
 
             ' ',
@@ -553,14 +775,14 @@ const report = () => {
 
             {
                 image: 'cortanteBasalX',
-                width: 525
+                width: 300
             },
 
             ' ',
 
             {
                 image: 'cortanteBasalY',
-                width: 525
+                width: 300
             },
 
             ' ',
@@ -572,14 +794,14 @@ const report = () => {
 
             {
                 image: 'movilizadaX',
-                width: 525
+                width: 300
             },
 
             ' ',
 
             {
                 image: 'movilizadaY',
-                width: 525
+                width: 300
             },
 
             ' ',
@@ -591,7 +813,7 @@ const report = () => {
 
             {
                 image: 'columnDistro',
-                width: 525
+                width: 300
             },
 
             ' ',
@@ -620,17 +842,193 @@ const report = () => {
 
             ' ',
 
+
+            {
+                text: 'Elementos estructurales',
+                style: 'header',
+                tocItem: true
+            },
+
+            {
+                text: 'Vigas principales',
+                style: 'subHeader'
+            },
+
+            ' ', 
+
+            {
+                image: 'beamImg',
+                width: 300
+            },
+
+            ' ',
+
+            {
+                text:'Las vigas principales son afueron diseñadas con las siguientes características, siguiendo las recomendaciones de las normas referidas anteriormente.',
+                style: 'paragraph'
+            },
+
+            ' ',
+
+            {
+                ul: [
+                    `Recubrimiento: ${userMainBeamCover.value} mm.`,
+                    `Base: ${userMainBeamBase.value} cm.`,
+                    `Altura: ${userMainBeamHeight.value} cm.`,
+                    `Armado superior: ${userMainBeamUpperNum.value} varillas.`,
+                    `Diámetro varillas superiores: ${userMainBeamUpperDiam.value} mm.`,
+                    `Armado inferior: ${userMainBeamLowerNum.value} varillas.`,
+                    `Diámetro varillas inferiores: ${userMainBeamLowerDiam.value} mm.`
+                ]
+            },
+
+            ' ',
+
+            {
+                text: 'Vigas secundarias',
+                style: 'subHeader'
+            },
+
+            ' ',
+
+            {
+                text:'Por otra parte, las vigas secundarias son afueron diseñadas con las siguientes características, siguiendo las recomendaciones de las normas referidas anteriormente.',
+                style: 'paragraph'
+            },
+
+            ' ',
+
+            {
+                ul: [
+                    `Recubrimiento: ${userSecondaryBeamCover.value} mm.`,
+                    `Base: ${userSecondaryBeamBase.value} cm.`, 
+                    `Altura: ${userSecondaryBeamHeight.value} cm.`,
+                    `Armado superior: ${userSecondaryBeamUpperNum.value} varillas.`,
+                    `Diámetro varillas superiores: ${userSecondaryBeamUpperDiam.value} mm.`,
+                    `Armado inferior: ${userSecondaryBeamLowerNum.value} varillas.`,
+                    `Diámetro varillas inferiores: ${userSecondaryBeamLowerDiam.value} mm.`
+                ]
+            },
+
+            ' ',
+
+            {
+                text: 'Columnas',
+                style: 'subHeader'
+            },
+
+            ' ',
+
+            {
+                image: 'columnImg',
+                width: 525
+            },
+
+            ' ', 
+
+            {
+                text: 'Las columnas de hormigón y acero de refuerzo tienen las características siguientes.'
+            },
+
+            ' ',
+
+            {
+                ul: [
+                    `Recubrimiento: ${userColumnCover.value} mm.`,
+                    `Base: ${userColumnBase.value} cm.`, 
+                    `Altura: ${userColumnHeight.value} cm.`,
+                    `Área del acero transversal de refuerzo: ${userColumnSteelArea.value} cm².`,
+                ]
+            },
+
+            ' ',
+
+            {
+                text: 'Losa',
+                style: 'subHeader'
+            },
+
+            ' ',
+
+            {
+                image: 'slabImg',
+                width: 400
+            },
+
+            ' ',
+
+            {
+                text: `La losa alivianda y armada en dos direcciones cuenta con bloque y su espesor es de ${userSlabThickness.value} cm.`
+            },
+
+            ' ',
+
+            {
+                text: 'Conexiones viga-columna',
+                style: 'subHeader'
+            },
+
+            ' ',
+
+            {
+                image: 'conectionsImg',
+                width: 525
+            },
+             
+            ' ',
+
+            {
+                text: 'Deberán cumplir los requerimientos de ACI 318, Capítulo 21(Estructuras Sismo Resistentes) y ACI 352.',
+                style: 'paragraph'
+            },
+
+            ' ',
+
             {
                 text: 'Cimentación',
                 style: 'subHeader'
             },
 
+            ' ',
+
             {
                 image: 'foundationImage',
-                width: 525
+                width: 400
             },
 
-            ' '
+            ' ',
+
+            {
+                image: 'foundationDeformationX',
+                widht: 400
+            },
+
+            ' ',
+
+            {
+                image: 'foundationDeformationY',
+                width: 400
+            },
+
+            ' ',
+
+            {
+                text: `El diseño de la cimentación se fundamentó en NEC-SE-CM GEOTECNIA Y CIMENTACIONES. Para el diseño de la cimentación tipo ${userFoundationType.value} se utilizó el software ${userFoundationSoftware.value}. Dado que la cimentación tiene una profundidad de ${userFoundationDepth.value} m, esta se considera superficial.`,
+                style: 'paragraph'
+            },
+
+            ' ',
+
+            {
+                text: 'Conclusiones y recomendaciones finales',
+                style: 'header',
+                tocItem: true
+            },
+
+            {
+                text: `${userConclusions.value}`,
+                style: 'paragraph'
+            }
            
              
         ],
@@ -646,7 +1044,8 @@ const report = () => {
                 lineHeight: 1.2
             },
             paragraph: {
-                alignment: 'justify'
+                alignment: 'justify',
+                lineHeight: 1.2
             },
             tableHeader: {
                 bold: true,
@@ -658,6 +1057,9 @@ const report = () => {
             croquis: croquisUser.value,
             seismicZonesEcuador: 'https://i.ibb.co/0CTX04S/seismic-Zones-Ecuador-NEC15.png',
             designSpectrum: 'https://i.ibb.co/SV6HGj8/design-Spectrum-NEC15.png',
+            windCoeff: 'https://i.ibb.co/pwgVSkR/coeff-Wind-Height.png',
+            CfTableImage: 'https://i.ibb.co/dPVxTpy/coeff-Wind-Incl.png',
+            CeTableImage: 'https://i.ibb.co/jDwd4fr/coeff-Wind-Location-NEC2011.png',
             soilProfile: userGeotechSoilProfileInput.value,
             mathModelo: userMathModel.value,
             derivaX: userDeriveX.value,
@@ -669,7 +1071,13 @@ const report = () => {
             columnDistro: userColumnDist.value,
             demandaCapCol: userDemandCapacity.value,
             demandaCapBeam: userDemandCapacityBeams.value,
-            foundationImage: userFoundation.value
+            beamImg: 'https://i.ibb.co/txxxk9D/reinforced-Beam.png',
+            columnImg: 'https://i.ibb.co/Q8LLXwc/column-Concrete.jpg',
+            slabImg: 'https://i.ibb.co/m02NWh9/losa.jpg',
+            conectionsImg: 'https://i.ibb.co/BzHj4mG/conection-Beam-Column.png',
+            foundationImage: userFoundationImage.value,
+            foundationDeformationX: userFoundationDeformationX.value,
+            foundationDeformationY: userFoundationDeformationY.value,
         }
     }
 

@@ -53,16 +53,80 @@ const Concrete = () => {
                         <input class="input" type="text" name="address" id="address" placeholder="Calle, cantón, provincia...">
                     </div>
 
-                    <!-- <div class="project-data-container input-container">
-                        <button type="button" class="button button-input" id="croquisButton">Subir croquis</button> 
-                    </div> -->
-
                     <div class="project-data-container input-container" id="croquisRenderInput">
-                    
                         <label class="label" for="croquisInput">Sube la URL de la imagen del croquis</label>
                         <input class="input" type="text" name="croquisInput" id="croquisInput" placeholder="Croquis URL">
-
                     </div>
+
+                    <div class="project-data-container input-container">
+                        <label class="label" for="floors">Número de plantas</label>
+                        <input class="input" type="text" name="floors" id="floors" placeholder="Número de plantas">
+                    </div>
+
+                    <div class="standard-data-container input-container">
+                        <input type="checkbox" name="underground" id="underground">
+                        <label class="label label-checkbox" for="underground">Edificación con subsuelo</label>
+                    </div>
+
+                    <div class="project-data-container input-container">
+                        <label class="label" for="elevation">Elevación de la edificación</label>
+                        <input class="input" type="text" name="elevation" id="elevation" placeholder="Elevación">
+                    </div>
+
+                    <div class="project-data-container input-container"> 
+                        <label class="label" for="category">Categoría de la estructura</label>
+                        <select class="input" name="category" id="category">
+                            <option  value="essential">Edificaciones Esenciales</option>
+                            <option value="special">Estructuras de Ocupación Especial</option>
+                            <option value="others">Otras Estructuras</option>
+                        </select>
+                    </div> 
+
+                    <div class="project-data-container input-container">
+                        <label class="label" for="usage">Tipo de uso, destino e importancia</label>
+                        <input class="input" type="text" name="usage" id="usage" placeholder="Uso que se le dará a la estructura">
+                    </div>
+
+                    <div class="project-data-container input-container">
+                        <label class="label" for="constructionArea">Área de construcción</label>
+                        <input class="input" type="text" name="constructionArea" id="constructionArea" placeholder="Área de construcción total">
+                    </div>
+
+                    <div class="container-h3">
+                        <h3 class="h3">Detalles por nivel</h3>
+                    </div>
+
+                    <div class="project-data-container input-container">
+                        <label class="label" for="undergroundLevel">Niveles por piso</label>
+                        <input class="input" type="text" name="undergroundLevel" id="undergroundLevel" placeholder="Nivel del subsuelo">
+                        <input class="input" type="text" name="groundFloorLevel" id="groundFloorLevel" placeholder="Nivel de planta baja">
+                        <input class="input" type="text" name="firstFloorLevel" id="firstFloorLevel" placeholder="Nivel de primera planta alta">
+                        <input class="input" type="text" name="secondFloorLevel" id="secondFloorLevel" placeholder="Nivel de segunda planta alta">
+                        <input class="input" type="text" name="thirdFloorLevel" id="thirdFloorLevel" placeholder="Nivel de tercera planta alta">
+                        <input class="input" type="text" name="fourthFloorLevel" id="fourthFloorLevel" placeholder="Nivel de cuarta planta alta">
+                    </div>
+
+                    <div class="project-data-container input-container">
+                        <label class="label" for="undergroundArea">Áreas estructurales netas</label>
+                        <input class="input" type="text" name="undergroundArea" id="undergroundArea" placeholder="Área de subsuelo">
+                        <input class="input" type="text" name="groundFloorArea" id="groundFloorArea" placeholder="Área de planta baja">
+                        <input class="input" type="text" name="firstFloorArea" id="firstFloorArea" placeholder="Área de primera planta alta">
+                        <input class="input" type="text" name="secondFloorArea" id="secondFloorArea" placeholder="Área de segunda planta alta">
+                        <input class="input" type="text" name="thirdFloorArea" id="thirdFloorArea" placeholder="Área de tercera planta alta">
+                        <input class="input" type="text" name="fourthFloorArea" id="fourthFloorArea" placeholder="Área de cuarta planta alta">
+                    </div>
+
+                    <div class="project-data-container input-container">
+                        <label class="label" for="undergroundArea">Uso principal por planta</label>
+                        <input class="input" type="text" name="undergroundUsage" id="undergroundUsage" placeholder="Uso de subsuelo">
+                        <input class="input" type="text" name="groundFloorUsage" id="groundFloorUsage" placeholder="Uso de planta baja">
+                        <input class="input" type="text" name="firstFloorUsage" id="firstFloorUsage" placeholder="Uso de primera planta alta">
+                        <input class="input" type="text" name="secondFloorUsage" id="secondFloorUsage" placeholder="Uso de segunda planta alta">
+                        <input class="input" type="text" name="thirdFloorUsage" id="thirdFloorUsage" placeholder="Uso de tercera planta alta">
+                        <input class="input" type="text" name="fourthFloorUsage" id="fourthFloorUsage" placeholder="Uso de cuarta planta alta">
+                    </div>
+
+
 
                 </div>
             </div>
@@ -323,6 +387,28 @@ const Concrete = () => {
                         <input class="input" type="text" name="vibrationModesNinety" id="vibrationModesNinety" placeholder="Modos de vibración para alcanzar el 90% de masa movilizada">
                     </div>
 
+                    <div class="container-h3">
+                        <h3 class="h3">Cargas de viento</h3>
+                    </div>
+
+                    <div class="load-data-container input-container">
+                        <label class="label" for="windCoefHeight">Coeficiente de corrección de velocidad de viento en función de la altura
+                        </label>
+                        <input class="input" type="text" name="windCoefHeight" id="windCoefHeight" placeholder="Coeficiente σ">
+                        <label class="label" for="windCoefHeight">Coeficiente en función de la inclinación de la estructura
+                        </label>
+                        <input class="input" type="text" name="windCoefIncl" id="windCoefIncl" placeholder="Coeficiente 𝐶f">
+                        <label class="label" for="windCoefLocation">Coeficiente en función de la altura y ubicación de la edificación
+                        </label>
+                        <input class="input" type="text" name="windCoefLocation" id="windCoefLocation" placeholder="Coeficiente 𝐶e">
+                        <label class="label" for="windPressureBar">Presión en barlovento
+                        </label>
+                        <input class="input" type="text" name="windPressureBar" id="windPressureBar" placeholder="Presión en barlovento">
+                        <label class="label" for="windPressureSot">Presión en sotavento
+                        </label>
+                        <input class="input" type="text" name="windPressureSot" id="windPressureSot" placeholder="Presión en sotavento">
+                    </div>    
+
                 </div>
 
             </div>
@@ -420,6 +506,12 @@ const Concrete = () => {
                             <option value="masonry">Mampostería, con desplazamiento máximo de 0.01</option>
                         </select>
                     </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="deriveX">Derivas de piso en X y Y</label>
+                        <input class="input" type="text" name="deriveX" id="deriveX" placeholder="URL de la deriva de piso en X">
+                        <input class="input" type="text" name="deriveY" id="deriveY" placeholder="URL de la deriva de piso en Y">
+                    </div>
                 </div>
             </div>
 
@@ -444,15 +536,9 @@ const Concrete = () => {
                         <button class="button button-input" id="mathModel">Subir Modelo Matemático</button>
                     </div> -->
 
-                    <div                        class="personal-data-contain    er input-container">
+                    <div class="personal-data-container input-container">
                         <label class="label" for="mathModel">Modelo matemático</label>
                         <input class="input" type="text" name="mathModel" id="mathModel" placeholder="URL del modelo matemático">
-                    </div>
-
-                    <div class="personal-data-container input-container">
-                        <label class="label" for="deriveX">Derivas de piso en X y Y</label>
-                        <input class="input" type="text" name="deriveX" id="deriveX" placeholder="URL de la deriva de piso en X">
-                        <input class="input" type="text" name="deriveY" id="deriveY" placeholder="URL de la deriva de piso en Y">
                     </div>
 
                     <div class="personal-data-container input-container">
@@ -482,13 +568,177 @@ const Concrete = () => {
                         <input class="input" type="text" name="demandCapacityBeams" id="demandCapacityBeams" placeholder="URL de la demanda/capacidad de vigas">
                     </div>
 
-                    <div class="personal-data-container input-container">
-                        <label class="label" for="foundation">Cimentación</label>
-                        <input class="input" type="text" name="foundation" id="foundation" placeholder="URL de la cimentación">
-                    </div>
-
                 </div>
             </div>
+
+            <div class="elements-data field">
+                <div class="container-h2">
+                    <h2 class="h2">Elementos estructurales</h2>
+                </div>
+
+                <div class="elements-data-input field-input">
+                    <div class="container-h3">
+                        <h3 class="h3">Vigas principales</h3>
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="mainBeamCover">Recubrimiento</label>
+                        <input class="input" type="text" name="mainBeamCover" id="mainBeamCover" placeholder="Recubrimiento de viga principal en mm">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="mainBeamBase">Base (b) de viga</label>
+                        <input class="input" type="text" name="mainBeamBase" id="mainBeamBase" placeholder="Base (b) de la viga en cm">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="mainBeamHeight">Altura (h) de viga</label>
+                        <input class="input" type="text" name="mainBeamHeight" id="mainBeamHeight" placeholder="Altura (h) de la viga en cm">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="mainBeamUpperDiam">Diámetro superior de varillas</label>
+                        <input class="input" type="text" name="mainBeamUpperDiam" id="mainBeamUpperDiam" placeholder="Diámetro en mm">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="mainBeamUpperNum">Número superior de varillas</label>
+                        <input class="input" type="text" name="mainBeamUpperNum" id="mainBeamUpperNum" placeholder="Cantidad de varillas superiores">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="mainBeamLowerDiam">Diámetro inferior de varillas</label>
+                        <input class="input" type="text" name="mainBeamLowerDiam" id="mainBeamLowerDiam" placeholder="Diámetro en mm">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="mainBeamLowerNum">Número inferior de varillas</label>
+                        <input class="input" type="text" name="mainBeamLowerNum" id="mainBeamLowerNum" placeholder="Cantidad de varillas inferiores">
+                    </div>
+
+                    <div class="container-h3">
+                        <h3 class="h3">Vigas secundarias</h3>
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="secondaryBeamCover">Recubrimiento</label>
+                        <input class="input" type="text" name="secondaryBeamCover" id="secondaryBeamCover" placeholder="Recubrimiento de viga secundaria en mm">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="secondaryBeamBase">Base (b) de viga</label>
+                        <input class="input" type="text" name="secondaryBeamBase" id="secondaryBeamBase" placeholder="Base (b) de la viga en cm">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="secondaryBeamHeight">Altura (h) de viga</label>
+                        <input class="input" type="text" name="secondaryBeamHeight" id="secondaryBeamHeight" placeholder="Altura (h) de la viga en cm">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="secondaryBeamUpperDiam">Diámetro superior de varillas</label>
+                        <input class="input" type="text" name="secondaryBeamUpperDiam" id="secondaryBeamUpperDiam" placeholder="Diámetro en mm">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="secondaryBeamUpperNum">Número inferior de varillas</label>
+                        <input class="input" type="text" name="secondaryBeamUpperNum" id="secondaryBeamUpperNum" placeholder="Cantidad de varillas superiores">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="secondaryBeamLowerDiam">Diámetro inferior de varillas</label>
+                        <input class="input" type="text" name="secondaryBeamLowerDiam" id="secondaryBeamLowerDiam" placeholder="Diámetro en mm">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="secondaryBeamLowerNum">Número inferior de varillas</label>
+                        <input class="input" type="text" name="secondaryBeamLowerNum" id="secondaryBeamLowerNum" placeholder="Cantidad de varillas inferiores.">
+                    </div>
+
+                    <div class="container-h3">
+                        <h3 class="h3">Columnas</h3>
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="columnCover">Recubrimiento</label>
+                        <input class="input" type="text" name="columnCover" id="columnCover" placeholder="Recubrimiento de columna en mm.">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="columnBase">Base (b) de columna</label>
+                        <input class="input" type="text" name="columnBase" id="columnBase" placeholder="Base (b) de la columna en cm.">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="columnHeight">Altura (h) de columna</label>
+                        <input class="input" type="text" name="columnHeight" id="columnHeight" placeholder="Altura (h) de la columna en cm.">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="columnSteelArea">Área de acero transversal</label>
+                        <input class="input" type="text" name="columnSteelArea" id="columnSteelArea" placeholder="Área de acero transversal en cm².">
+                    </div>
+
+                    <div class="container-h3">
+                        <h3 class="h3">Losa</h3>
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="slabThickness">Grosor de losa</label>
+                        <input class="input" type="text" name="slabThickness" id="slabThickness" placeholder="Grosor de losa en cm.">
+                    </div>
+
+                    <div class="container-h3">
+                        <h3 class="h3">Cimentación</h3>
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="foundationSoftware">Software de diseño</label>
+                        <input class="input" type="text" name="foundationSoftware" id="foundationSoftware" placeholder="Software de diseño para losa.">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="foundationType">Tipo de cimentación</label>
+                        <input class="input" type="text" name="foundationType" id="foundationType" placeholder="Zapatas aisladas, zapatas combinadas, losa de cimentación, etc.">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="foundationDepth">Profundidad de cimentación</label>
+                        <input class="input" type="text" name="foundationDepth" id="foundationDepth" placeholder="Profundidad en metros.">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="foundationImage">Representación de cimentación</label>
+                        <input class="input" type="text" name="foundationImage" id="foundationImage" placeholder="URL de la imagen de cimentación.">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="foundationDeformationX">Deformación en X durante un sismo</label>
+                        <input class="input" type="text" name="foundationDeformationX" id="foundationDeformationX" placeholder="URL de la imagen de deformación en X.">
+                    </div>
+
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="foundationDeformationY">Deformación en Y durante un sismo</label>
+                        <input class="input" type="text" name="foundationDeformationY" id="foundationDeformationY" placeholder="URL de la imagen de deformación en Y.">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="conclusions-data field">
+                <div class="container-h2">
+                    <h2 class="h2">Conclusiones</h2>
+                </div>
+
+                <div class="elements-data-input field-input">
+                    <div class="personal-data-container input-container">
+                        <label class="label" for="conclusions">Conclusiones</label>
+                        <input class="input" type="text" name="conclusions" id="conclusions" placeholder="Conclusiones finales.">
+                    </div>
+                </div>
+
+            </div>
+
 
             <div class="generate-pdf field">
                 <div class="field-input">
