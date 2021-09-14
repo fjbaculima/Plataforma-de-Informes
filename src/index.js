@@ -8,6 +8,7 @@ import Footer from './templates/Footer'
 
 import croquisRenderInput from './templates/croquisRenderInput'
 import report from './utils/report'
+import reportSteel from './utils/reportSteel'
 
 
 /* import pdfMake from "pdfmake/build/pdfmake";
@@ -81,7 +82,10 @@ import './styles/sytles.css'
         concreteReportGen.addEventListener('click', report)
     })
 
-    
+    steel.addEventListener('click', () => {
+        const steelReportGen = document.querySelector('#genPDF')
+        steelReportGen.addEventListener('click', reportSteel)
+    })
 
     //let mostrarReporte = await report()
 
